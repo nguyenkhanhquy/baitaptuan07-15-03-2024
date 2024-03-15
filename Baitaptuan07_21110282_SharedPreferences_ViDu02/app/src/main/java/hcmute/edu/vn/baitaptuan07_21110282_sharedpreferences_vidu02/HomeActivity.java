@@ -19,7 +19,9 @@ public class HomeActivity extends AppCompatActivity {
         txtEmail = (TextView) findViewById(R.id.emailHome);
         String email = getEmail();
         if (!email.isEmpty()) {
-            txtEmail.setText("Email đăng nhập đã nhớ mật khẩu: " + email);
+            txtEmail.setText("Tài khoản đã đăng nhập thành công và đã tích remember me có email là: " + email);
+        } else {
+            txtEmail.setText("Tài khoản đã đăng nhập thành công và không tích remember me");
         }
 
         Button mEmailSignOutButton = (Button) findViewById(R.id.email_sign_out_button);
